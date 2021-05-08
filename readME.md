@@ -6,7 +6,7 @@ This project was intended to make things easy for the victim as well as the poli
 
 - Victim Side
  
-  * We can understand the plight of a victim when they are robbed, hurt, assaulted, etc. on a moving vehicle or the platform, and help them file an FIR online without the feeling of being judged or having to go all the way to the nearest RPF quarters.
+  * We can understand the plight of a victim when they are robbed, hurt, assaulted, etc. on a moving vehicle or the platform, and help them file an FIR online without the feeling of being judged or having to go all the way to the nearest RPF quarters. They can do this at the convenience of thier homes or on the journey in the train itself.
 
   * To validate themselves, they have to verify an OTP on their cell number and give some basic information. If they wish to create an account to autofill some details in the future, they may even create an account with us. Their details shall be stored in a pgSQL database.
 
@@ -17,3 +17,9 @@ This project was intended to make things easy for the victim as well as the poli
    * The victim then receives an OCR document in the same format as an FIR and they can download it.
 
 - Police Side
+
+  * The nearest RPF shall receive the alert of an incoming FIR on their portal.
+
+  * If it is not under their jurisdiction, they can forward it to other RPFs according to the law depending on whether it is on the local lines, or inter-city lines.
+
+  * The time consuming process of documentation is reduced and they can take swift action and reach out to the victim.
