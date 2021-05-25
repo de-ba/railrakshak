@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="/enquiry/css/bootstrap.min.css?version=1" rel="stylesheet">
+
+    <style>
+
+        .button2 {
+        align:center;
+        text-align:center;
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+        width:20%;
+        height:40px;
+        }
+
+        .button2:hover {
+         align:center;
+         text-align:center;
+         background-color: #008CBA;
+         color: white;
+         width:20%;
+         height:40px;
+         }
+
+    </style>
+</head>
+<h1 align="center">FIR STATUS</h1>
+<h4 align="center">Enter the FIR ID below and check the status of the respective FIR.</h4>>
+<body>
+<form>
+
+    <div class="Enter" align="center">
+        <label>Enter FIR Id</label><br><br>
+        <input type="text" id="firid" maxlength="10" placeholder="Enter FIR Id" name="firid" >
+        <br>
+        <br>
+
+        <input type="button" class="button2" id="firid" onclick="local()" value="submit">
+    </div>
+</form>
+
+</body>
+<script>
+function local() {
+var firid= document.getElementById("firid");
+localStorage.setItem("firid", firid.value);
+var ans = confirm('Do u want to proceed?');
+if (ans == true) {document.location.href='http://localhost:63342/a1/new_tracking_new.html',true}
+else {
+return false;
+}
+}
+</script>
+</html>

@@ -1,0 +1,71 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="/enquiry/css/bootstrap.min.css?version=1" rel="stylesheet">
+
+    <style>
+
+        .button2 {
+        align:center;
+        text-align:center;
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+        width:20%;
+        height:40px;
+        }
+
+        .button2:hover {
+         align:center;
+         text-align:center;
+         background-color: #008CBA;
+         color: white;
+         width:20%;
+         height:40px;
+         }
+
+    </style>
+</head>
+<h1 align="center">FIR STATUS</h1>
+<h4 align="center">Enter the FIR ID below and update the status of the respective FIR.</h4>>
+<body>
+<form action="http://localhost:4567/updatestatus" method="get">
+
+    <div class="Enter" align="center">
+        <label>Enter FIR Id</label><br>
+        <input type="text" id="firid" maxlength="10" placeholder="Enter FIR Id" name="firid" >
+        <br><br>
+        <label>Stages</label>
+        <br>
+        <select id="stages" name="status">
+            <option value="FIR Verified">FIR Verified</option>
+            <option value="Under Process">Under Process</option>
+            <option value="Investigation Complete">Investigation Complete</option>
+            <option value="case closed">Case Closed</option>
+        </select><br><br>
+
+        <input type="submit" class="button2" value="Submit">
+    </div>
+</form>
+<script>
+    window.onload = parameters;
+  function parameters() {
+  var vart = window.location.search.substring(1);
+  var vars = vart.split("=");
+var r = vars[1];
+
+        var tp = document.getElementById('firid');
+
+tp.value=r
+
+                }
+
+
+
+</script>
+</body>
+</html>

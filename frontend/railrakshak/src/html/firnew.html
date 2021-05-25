@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/firnew.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <meta charset="UTF-8">
+    <title>FIR</title>
+    <meta name="firdetails"  >
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!--<div id="google_translate_element"></div>-->
+    <!--<script src="../js/multi.js">-->
+
+</head>
+<body onload="parameters()">
+<script>
+
+</script>
+
+<script src="../js/globalVariables.js"></script>
+<script src="../js/firnew.js"></script>
+<script src="../js/header.js"></script>
+<form action="http://192.168.43.57:4567/registerfir" method="post" id="form1">
+    <div class="container">
+        <div class="p">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Informant Details</strong></h3>
+
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="username"><b>USERNAME</b></label>
+                            &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="text" class="form-control"  id="username" name="username" clientIdMode="static" readonly>
+                            </div>
+                        <br><br>
+                        <div class="form-inline" role="form">
+                            <label for="firstnamein" class="required" ><b>FIRST NAME</b></label>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                            <input type="text" class="form-control"  id="firstnamein" name="firstnamein" required="true" >
+                        <!--</div>-->
+                        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label for="middlenamein"><b>MIDDLE NAME</b></label>
+                            <input type="text" class="form-control" id="middlenamein" name="middlenamein">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastnamein" class="required" ><b>LAST NAME</b></label>
+                            <input type="text" class="form-control" id="lastnamein" name="lastnamein" required="true">
+                        </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                        </div>
+                        <br><br>
+                        <div class="form-group">
+                            <label for="fathersnamein" ><b>FATHER'S NAME</b></label>
+                            <input type="text" class="form-control" id="fathersnamein" name="fathersnamein" required="true" >
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <br><br>
+                        <div class="form-group">
+                            <label for="dobin" class="required"><b>DATE OF BIRTH</b></label>
+                            &nbsp;
+                            <input type="date" class="form-control" size="" id="dobin" align="center" name="dobin" required="true">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <label for="occupationin"><b>OCCUPATION</b></label>
+                            <input type="text" class="form-control" id="occupationin" align="center" name="occupationin" required="true">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+
+                        <div class="form-group">
+                            <label class="required"><b>GENDER</b></label>&nbsp;&nbsp;&nbsp;
+                            <label class="radio-inline"><input type="radio" name="genderin" VALUE="MALE" required="true">MALE</label>
+                            <label class="radio-inline"><input type="radio" name="genderin" VALUE="FEMALE" required="true">FEMALE</label>
+                            <label class="radio-inline"><input type="radio" name="genderin" value="OTHER" required="true">OTHER</label>
+                        </div><br><br>
+
+                    </div></div></div>
+            <div class=" panel panel-primary">
+                <div class="panel-heading"><strong>Contact Details</strong></div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="emailin" class="required"><b>EMAIL</b></label>
+                            <input type="email" class="form-control" id="emailin" name="emailin" required="true">
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label for="contactnoin" class="required" ><b>CONTACT NUMBER</b></label>
+                            <input type="number" class="form-control" id="contactnoin" name="contactnoin" align="center" max="99999999999" required="true">
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </div></div></div>
+            <div class=" panel panel-primary">
+                <div class="panel-heading"> <strong>Address Details</strong></div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <label for="addressin" class="required"><b>Address</b></label>
+                                <textarea class="form-control" id="addressin" name="addressin" align="center" required="true"></textarea>
+                            </div>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="nationalityin" class="required"><b>NATIONALITY</b></label>
+                                <input type="text" class="form-control" id="nationalityin" name="nationalityin" align="center" required="true">
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="cityin"><b>CITY</b></label>
+                                <input type="text" class="form-control" id="cityin" name="cityin" align="center" required="true">
+                            </div><br><br>
+                            <div class="form-group">
+                                <label for="statein"><b>STATE</b></label>
+                                &nbsp;&nbsp;
+                                <input type="text" class="form-control" id="statein" name="statein" align="center" required="true">
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="districtin"><b>DISTRICT</b></label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="text" class="form-control" id="districtin" name="districtin" align="center" required="true">
+                            </div></div></div></div></div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Identity Details</strong></h3>
+
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="aadhaarnoin"><b>AADHAAR NO./PASSPORT NO.</b></label><br>
+                            <input type="number" class="form-control" id="aadhaarnoin" name="aadhaarnoin" max="999999999999" required="true" max="999999999999">
+                        </div><br><br>
+
+                    </div><div></div>
+                </div></div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Additional Details</strong></h3>
+                </div>
+                <div class="panel-body">
+
+                    <div class="form-group">
+                        <label for="reasonsdelayin" ><b>REASONS FOR DELAY OF FIR </b></label><br>
+                        <textarea id="reasonsdelayin" name="reasonsdelayin" >enter text</textarea>
+                    </div></div></div>
+
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>FIR DETAILS</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="firtypef" class="required">TYPE OF CRIME</label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <select class="form-control" id="firtypef" name="firtypef" required="true">
+                                    <option></option>
+                                    <option name="firtypef">MURDER</option>
+                                    <option name="firtypef">ATTEMPT TO MURDER</option>
+                                    <option name="firtypef">DACOITY</option>
+                                    <option name="firtypef">DACOITY WITH FIREARMS</option>
+                                    <option name="firtypef">ROBBERY</option>
+                                    <option name="firtypef">ROBBERY WITH FIREARMS</option>
+                                    <option name="firtypef">BURGLARY</option>
+                                    <option name="firtypef">THEFT</option>
+                                    <option name="firtypef">RAPE</option>
+                                    <option name="firtypef">  MOLESTATION</option>
+                                    <option name="firtypef">HURT</option>
+                                    <option name="firtypef">RIOTS</option>
+                                    <option name="firtypef">COMMUNAL RIOTS</option>
+                                    <option name="firtypef">ASSAULT ON GOVT. SERVANT ACT</option>
+                                    <option name="firtypef">GAMBLING</option>
+                                    <option name="firtypef">MONEY LENDERS ACT</option>
+                                    <option name="firtypef">ESSENTIAL COMMODITIES ACT</option>
+                                    <option name="firtypef">OTHERS</option>
+                                </select>
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="firdatef" class="required"><b>DATE OF lODGING FIR</b></label>
+                                <input type="date" class="form-control" id="firdatef" name="firdatef" required="true" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+                            <div class="form-group">
+                                <label for="firtimef" class="required"><b>TIME OF LODGING FIR</b></label>
+                                <input type="time" class="form-control" id="firtimef" name="firtimef" required="true" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+                        </div></div></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Incident Details</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="stationf"  ><b>PLACE OF INCIDENCE</b></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="button" onclick="getLocation()" class="btn btn-primary" value="Get Location">
+                                <input type="text" class="form-control" id="stationf" name="stationf" >
+                            </div>
+
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label for="datefromf"><b>DATE OF INCIDENCE(from)</b></label>
+                                <input type="date" class="form-control" id="datefromf" name="datefromf" required="true" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="datetof"><b>DATE OF INCIDENCE(to)</b></label>
+                                <input type="date" class="form-control" id="datetof" name="datetof" required="true" >
+                            </div>
+                            <br>
+                            <br>
+
+                            <div class="form-group">
+                                <label for="timefromf" ><b>TIME OF INCIDENCE(from)</b></label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="time" class="form-control" id="timefromf" name="timefromf" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+                            <div class="form-group">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="timetof"  ><b>TIME OF INCIDENCE(to)</b></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="time" class="form-control" id="timetof" name="timetof" >
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="cityf" ><b>CITY</b></label>
+                                <input type="text" class="form-control" id="cityf" name="cityf" >
+                            <!--</div>-->
+                            <!--<br><br>-->
+                            <!--<div class="form-group">-->
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <label for="statef"><b>STATE</b></label>
+                                <input type="text" class="form-control" id="statef" name="statef" required="true" >
+                            </div>
+                        </div> </div></div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Train Details</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" role="form">
+
+                            <div class="form-group">
+                                <label for="trainnof"><b>TRAIN NO.</b></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" class="form-control" id="trainnof" name="trainnof" max=99999999 required="true" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="trainnamef" ><b>TRAIN NAME</b></label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;
+                                <input type="text" class="form-control" id="trainnamef" name="trainnamef" >
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="sourcef"><b>SOURCE STATION</b></label>
+                                <input type="text" class="form-control" id="sourcef" name="sourcef" required="true" >
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div class="form-group">
+                                <label for="destinationf"><b>DESTINATION STATION</b></label>
+                                <input type="text" class="form-control" id="destinationf" name="destinationf" required="true">
+                            </div></div></div></div>
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Description of the Event</strong></h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" role="form">
+                            <label class="required"></label>
+                            <textarea class="form-control" rows="5" cols="100" id="detailsf" name="detailsf" required="true">MAXIMUM 8000 CHARACTERS</textarea>
+                        </div>
+                    </div></div>
+
+            <div>
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><strong>Details Of Items</strong></h3>
+
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-inline" role="form">
+                            <div class="form-group">
+                                <label for="typeit"><b>TYPE OF ITEM</b></label><br>
+                                <input type="text" class="form-control" id="typeit" name="typeit" >
+                            </div><br><br>
+                            <div class="form-group">
+                                <label for="valueworthit" ><b>WORTH VALUE OF ITEM</b></label><br>
+                                <input type="text" class="form-control" id="valueworthit" name="valueworthit">
+                            </div>
+                            <br><br>
+                            <div class="form-group">
+                                <label for="descriptionit"><b>DESCRIPTION OF ITEM</b></label><br>
+                                <textarea id="descriptionit" rows="5" cols="25" name="descriptionit" >Enter detailed description of Item</textarea>
+                            </div>
+
+                        </div></div></div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Details Of Suspect</strong></h3>
+
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="suspectnames" ><b>Suspect's Name</b></label><br>
+                            <input type="text" class="form-control" id="suspectnames" name="suspectnames" >
+                        </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label for="relativesnames"><b>Relative's Name</b></label><br>
+                            <input type="text" class="form-control" id="relativesnames" name="relativesnames" >
+                        </div>
+                        <br><br>
+                        <div class="form-group">
+                            <label for="contactnos" ><b>Contact Number</b></label>
+                            <br>
+                            <input type="number" class="form-control" id="contactnos" name="contactnos" align="center" max="10">
+                        </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label><b>GENDER</b></label> &nbsp;&nbsp;&nbsp;&nbsp;
+                            <label class="radio-inline"><input type="radio" name="genders" value="MALE">MALE</label>
+                            <label class="radio-inline"><input type="radio" name="genders" value="FEMALE">FEMALE</label>
+                            <label class="radio-inline"><input type="radio" name="genders" value="OTHER">OTHER</label>
+                        </div></div>
+                    <div></div>
+                </div></div>
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><strong>Suspects Address Details</strong></h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-inline" role="form">
+                        <div class="form-group">
+                            <label for="areas" ><b>Area</b></label><br>
+                            <input type="text" class="form-control" id="areas" name="areas" >
+                        </div> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label for="citys" ><b>City</b></label><br>
+                            <input type="text" class="form-control" id="citys" name="citys" >
+                        </div>
+                        <br><br>
+                        <div class="form-group">
+                            <label for="districts" ><b>District</b></label><br>
+                            <input type="text" class="form-control" id="districts" name="districts">
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="form-group">
+                            <label for="states" ><b>State</b></label><br>
+                            <input type="text" class="form-control" id="states" name="states" >
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div align="center">
+        <button class="btn btn-primary" type="submit" form="form1" value="Submit" align="center">Submit</button>
+
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <!--<div class="submit_btn">-->
+    <!--<input type="submit" value="Submit">-->
+    <!--</div>-->
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

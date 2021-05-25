@@ -1,0 +1,210 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>FIR Registration</title>-->
+
+    <!--<style>-->
+        <!--form {-->
+  <!--margin:0 auto;-->
+  <!--width:500px-->
+<!--}-->
+<!--input {-->
+  <!--margin-bottom:3px;-->
+  <!--padding:10px;-->
+  <!--width: 75%;-->
+  <!--border:1px solid #CCC-->
+<!--}-->
+<!--button {-->
+  <!--padding:10px-->
+<!--}-->
+<!--label {-->
+  <!--cursor:pointer-->
+<!--}-->
+<!--#form-switch {-->
+  <!--display:none-->
+<!--}-->
+<!--#register-form {-->
+  <!--display:none-->
+<!--}-->
+<!--#form-switch:checked~#register-form {-->
+  <!--display:block-->
+<!--}-->
+<!--#form-switch:checked~#login-form {-->
+  <!--display:none-->
+<!--}-->
+
+    <!--</style>-->
+
+
+<!--</head>-->
+<!--<body>-->
+
+
+<!--<form action="http://localhost:4567/registrationentry" method="post" style="border:1px solid #ccc">-->
+    <!--<div class="container" align="center">-->
+        <!--<h1>Register Page</h1>-->
+        <!--<p>Fill all the details to register!!!!!</p>-->
+        <!--<hr>-->
+    <!--</div>-->
+    <!--<div>-->
+
+        <!--<label for="usernamer"><b>UserName</b></label>-->
+        <!--<input type="text" placeholder="Enter Username" id="usernamer" name="usernamer" required>-->
+        <!--<br/><br>-->
+        <!--<label for="userpasswordr"><b>New Password</b></label>-->
+        <!--<input type="password" placeholder="Enter Password" id="userpasswordr" name="userpasswordr" required="required">-->
+        <!--<br/><br/>-->
+        <!--<label for="firstnamer"><b>First Name</b></label>-->
+        <!--<input type="text" placeholder="Enter First Name" id="firstnamer" name="firstnamer" required>-->
+<!--<br/><br/>-->
+        <!--<label for="middlenamer"><b>Middle Name</b></label>-->
+        <!--<input type="text" placeholder="Enter Middle Name" id="middlenamer" name="middlenamer" required>-->
+<!--<br/><br>-->
+        <!--<label for="lastnamer"><b>Last Name</b></label>-->
+        <!--<input type="text" placeholder="Enter Last Name" id="lastnamer" name="lastnamer" required>-->
+<!--<br/><br/>-->
+        <!--<label for="dobr"><b>Date Of Birth</b></label><br/>-->
+        <!--<input type="date" placeholder="mm-dd-yyyy" name="dobr" id="dobr" required="required">-->
+        <!--<br/><br/>-->
+
+        <!--<tr>-->
+            <!--<td>Gender</td>-->
+           <!--<input type="radio" id="gender" name="gender" value="male" size="5">Male-->
+                <!--<input type="radio" id="gender" name="gender" value="female" size="5">Female-->
+                <!--<input type="radio" id="gender" name="gender" value="other" size="5">Other-->
+        <!--</tr>-->
+<!--<br><br>-->
+        <!--<tr>-->
+            <!--<td>Address <br> </td>-->
+
+            <!--<td > <textarea rows="4" cols="50" maxlength="200" placeholder="Maximum 200 characters" name="addressr"></textarea> </td>-->
+
+            <!--&lt;!&ndash;    <td><input type="text" placeholder="Address Line 1" name="LOCALITY" id="address1" size="30"></td>-->
+                <!--<br>-->
+                <!--<td><input type="text" placeholder="Address Line 2" name="LOCALITY" id="address2" size="30"></td>-->
+                <!--<br>-->
+                <!--<td><input type="text" placeholder="Address Line 3" name="LOCALITY" id="address3" size="30"></td>-->
+              <!--&ndash;&gt;-->
+        <!--</tr>-->
+
+        <!--<br/><br/>-->
+
+        <!--<label for="cityr"><b>City</b></label>-->
+        <!--<input type="text" placeholder="Enter City Name" id="cityr" name="cityr" required>-->
+
+        <!--<br/><br/>-->
+
+        <!--<tr>-->
+            <!--<td>Pincode</td>-->
+            <!--<td><input type="text" name="pincoder" placeholder="Enter Pincode" id="pincoder" size="12"></td>-->
+
+            <!--<br/><br/>-->
+
+        <!--<label for="districtr"><b>District</b></label>-->
+        <!--<input type="text" placeholder="Enter District Name" id="districtr" name="districtr" required>-->
+        <!--<br/><br/>-->
+
+        <!--<label for="stater"><b>State</b></label>-->
+        <!--<input type="text" placeholder="Enter State Name" id="stater" name="stater" required>-->
+
+        <!--<br><br>-->
+
+            <!--<label for="countryr"><b>Country</b></label>-->
+            <!--<input type="text" placeholder="Enter Country Name" id="countryr" name="countryr" required>-->
+
+            <!--<br/><br/>-->
+
+
+            <!--<label for="useremailr"><b>Email Id</b></label>-->
+        <!--<input type="email" placeholder="Enter Email" id="useremailr" name="useremailr" required>-->
+<!--<br/><br/>-->
+
+
+
+        <!--<tr>-->
+            <!--<td>Mobile Number</td>-->
+            <!--<td><input type="number" name="usermobiler" placeholder="Enter 10 digit Mobile Number" id="usermobiler" size="10" maxlength="10" required></td>-->
+        <!--</tr>-->
+
+        <!--<br /><br/>-->
+
+       <!--&lt;!&ndash; <tr>-->
+            <!--<td>City</td>-->
+            <!--<td><select name="CITY">-->
+                <!--<option value="-1" selected>select..</option>-->
+                <!--<option value="New Delhi">NEW DELHI</option>-->
+                <!--<option value="Mumbai">MUMBAI</option>-->
+                <!--<option value="Goa">GOA</option>-->
+                <!--<option value="Patna">PATNA</option>-->
+            <!--</select></td>-->
+        <!--</tr> &ndash;&gt;-->
+
+        <!--&lt;!&ndash;<tr>-->
+            <!--<td>State</td>-->
+            <!--<td><select Name="STATE">-->
+                <!--<option value="-1" selected>select..</option>-->
+                <!--<option value="New Delhi">NEW DELHI</option>-->
+                <!--<option value="Mumbai">MUMBAI</option>-->
+                <!--<option value="Goa">GOA</option>-->
+                <!--<option value="Bihar">BIHAR</option>-->
+            <!--</select></td>-->
+        <!--<tr> &ndash;&gt;-->
+
+
+
+        <!--&lt;!&ndash;-->
+        <!--<td>District</td>-->
+            <!--<td><select name="DISTRICT">-->
+                <!--<option value="-1" selected>select..</option>-->
+                <!--<option value="Nalanda">NALANDA</option>-->
+                <!--<option value="UP">UP</option>-->
+                <!--<option value="Goa">GOA</option>-->
+                <!--<option value="Patna">PATNA</option>-->
+            <!--</select></td>-->
+
+        <!--</tr>     </tr> &ndash;&gt;-->
+
+        <!--&lt;!&ndash;-->
+        <!--<tr>-->
+            <!--<td>Country</td>-->
+            <!--<td><select name="COUNTRY">-->
+                <!--<option value="-1" selected>select..</option>-->
+                <!--<option value="India">INDIA</option>-->
+                <!--<option value="China">CHINA</option>-->
+                <!--<option value="Japan">JAPAN<option>-->
+                <!--<option value="France">FRANCE</option>-->
+            <!--</select></td>-->
+        <!--</tr>&ndash;&gt;-->
+
+
+
+
+
+
+<!--&lt;!&ndash;<div class="otpr">&ndash;&gt;-->
+    <!--&lt;!&ndash;<button type="button" class="otpr">Generate OTP</button>&ndash;&gt;-->
+    <!--&lt;!&ndash;<br>&ndash;&gt;-->
+    <!--&lt;!&ndash;<label for="otpr"><b></b></label>&ndash;&gt;-->
+    <!--&lt;!&ndash;<input type="text" placeholder="Enter OTP" id="otpr" name="otpr" required>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<br/>-->
+        <!--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>-->
+
+        <!--<div class="clearfix">-->
+            <!--<button type="button" class="cancelbtn">Cancel</button>-->
+            <!--<button type="submit" class="signupbtn">Register</button>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</form>-->
+
+
+<!--</body>-->
+<!--</html>-->
+
+<html><form action="http://localhost:4567/otpVerification" method="get" id="form1">
+    enter OTP: <input type="text" name="+s+"><br>
+enter username again<input type="text" name="usernamer"><br>
+<input type="submit" name="submit" value="submit" form="form1"></form>
+</html>
+<!--<button type="submit" form="form1" value="submit">Submit</button>-->

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Online FIR Registration Form</title>
+
+    <link rel="stylesheet" href="../css/OnlineRegistration.css" >
+    <meta name="keywords" content="General Application Form Responsive widget, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+
+
+    <!--<script src="../js/online_registration.js"></script>-->
+
+    <!--<script src="../js/globalVariables.js"></script>-->
+
+
+
+</head>
+<body>
+
+<div class="w3ls-banner">
+    <!---728x90--->
+    <div class="heading">
+        <h1>Online FIR Registration Form</h1>
+    </div>
+    <div class="container">
+        <div class="heading">
+            <h2>Please Enter Your Details</h2>
+            <p>Fill the registration form below and submit.</p>
+        </div>
+        <div class="agile-form">
+            <form action="http://192.168.43.57:4567/registrationentry" method="post" style="border:0px solid #ccc">
+                <ul class="field-list">
+
+                    <li class="name">
+
+                        <label class="form-label"> User Details <span class="form-required"> * </span></label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+									<input type="text" id="usernamer" name="usernamer" placeholder="User Name" required="">
+								</span><br><br>
+                            <span class="form-sub-label">
+									<input type="password" id="userpasswordr" name="userpasswordr" placeholder="Password" required="">
+								</span><br>
+                        </div>
+                    </li>
+                    <li class="name">
+
+                        <label class="form-label"> Name <span class="form-required"> * </span></label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+									<input type="text" id="firstnamer" name="firstnamer" placeholder="First Name" required="">
+								</span><br><br/>
+                            <span class="form-sub-label">
+									<input type="text" id="middlenamer" name="middlenamer" placeholder="Middle Name">
+								</span><br><br/>
+                            <span class="form-sub-label">
+									<input type="text" id="lastnamer" name="lastnamer" placeholder="Last Name" required="">
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label"> Date of Birth <span class="form-required"> * </span></label>
+                        <div class="form-input dob">
+								<span class="form-sub-label">
+
+
+									<input type="date" placeholder="mm-dd-yyyy" name="dobr" id="dobr" required="required">
+									<br/><br/>
+
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label"> Gender <span class="form-required"> * </span></label>
+                        <div class="form-input">
+                            <select class="form-dropdown" id="gender" name="gender" required="">
+                                <option value="">----</option>
+                                <option value="Male"> Male </option>
+                                <option value="Female"> Female </option>
+                                <option value="Other"> Other </option>
+                            </select>
+                        </div>
+                    </li>
+
+
+
+
+
+
+
+
+
+                    <li>
+                        <label class="form-label">
+                            Address
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+									<tr>
+										<td> <textarea name="addressr" style="color:black;" rows="4" cols="50" maxlength="200" placeholder="Maximum 200 characters"></textarea> </td>
+									</tr>
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label">
+                            City
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+					<input type="text" id="cityr" name="cityr" placeholder="City " required="">
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label">
+                            Pincode
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+									<input type="number"  id="pincoder" name="pincoder" placeholder="Pincode " required="">
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label">
+                            District
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+									<input type="text" id="districtr" name="districtr" placeholder="District" required="">
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label">
+                            State
+                            <span class="form-required"> * </span>
+                        </label>
+                        <div class="form-input add">
+								<span class="form-sub-label">
+					<input type="text" id="stater" name="stater" placeholder="State " required="">
+								</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label"> Country <span class="form-required"> * </span></label>
+                        <div class="form-input">
+                            <select class="form-dropdown" id="countryr" name="countryr" required="">
+                                <option value="">Select Country</option>
+                                <option value="India"> India </option>
+                                <option value="United States"> United States </option>
+                                <option value="China"> China </option>
+                                <option value="Indonesia"> Indonesia </option>
+                                <option value="England"> England </option>
+                                <option value="Japan"> Japan </option>
+                                <option value="Brazil"> Brazil </option>
+                                <option value="Mexico"> Mexico </option>
+                                <option value="Nigeria"> Nigeria </option>
+                                <option value="Russia"> Russia </option>
+                                <option value="Egypt"> Egypt </option>
+                                <option value="Germany"> Germany </option>
+                                <option value="Others"> Others </option>
+                            </select>
+                        </div>
+                    </li>
+
+                    <li>
+                        <label class="form-label"> E-Mail Address <span class="form-required"> * </span></label>
+                        <div class="form-input">
+                            <input type="email" id="useremailr" name="useremailr" placeholder="mail@example.com" required="">
+
+                        </div>
+                    </li>
+                    <li>
+                        <label class="form-label"> Mobile Number <span class="form-required"> * </span></label>
+                        <div class="form-input">
+                            <input type="number" id="usermobiler" name="usermobiler" placeholder="Mobile Number"  maxlength="10" required>
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+                <!--<div class="submit_btn">-->
+                <!--<input type="button" onclick="alert('Your OTP will be sent to the registered email address')" value="Generate OTP!">-->
+
+                <!--<label for="otpr"></label> <br> <br>-->
+                <!--<input type="number" maxlength="6" placeholder="Enter OTP" id="otpr" name="otpr" required>-->
+                <!--</div><br>-->
+                <div class="submit_btn">
+                    <a href="http://localhost:63342/railrakshak/src/html/Successful_registration_page.html">
+                        <input type="submit" value="Submit">
+                    </a>
+                </div>
+            </form>
+            <!---728x90--->
+        </div>
+    </div>
+    <!---728x90--->
+    <div class="copyright">
+        <p>© 2018 Online FIR Application Form. All rights reserved</p>
+    </div>
+</div>
+
+</body>
+</html>

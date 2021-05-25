@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<h1 align="center">FIR STATUS</h1><br></br>
+<h4 align="center" id="h2">Enter the FIR ID below and update the status of the respective FIR.</h4>
+<body>
+<form action="http://localhost:63342/updatestatus" method="get">
+    <div class="col-md-12 text-center  label_text" align="center" >
+        <label>Enter FIR Id</label>
+        <input type="text" id="firid" maxlength="10" placeholder="Enter FIR Id." name="firid"  ><br>
+        <label>STAGES</label>
+                    <select id="status" name="status">
+                <option value="FIR Verified">FIR Verified</option>
+                <option value="Under Process">Under Process</option>
+                <option value="Investigation Complete">Investigation Complete</option>
+                <option value="Case Closed">Case Closed</option>
+            </select>
+        <input type="submit" >&nbsp;&nbsp;
+    </div>
+</form>
+</body>
+</html>

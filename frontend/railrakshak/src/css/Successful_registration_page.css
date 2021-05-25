@@ -1,0 +1,49 @@
+    .heading {
+    text-align: center;
+    margin-top: 25px;
+    letter-spacing: 1px;
+    color:blue;
+    }
+
+
+        .button{
+        text-align:center;
+        }
+
+        .button{
+        margin-left:10px;
+        margin-right:10px;
+        }
+
+        .button2 {
+        align:center;
+        text-align:center;
+        background-color: white;
+        color: black;
+        border: 2px solid #008CBA;
+        width:50%;
+        height:80px;
+        }
+
+        .button2:hover {
+         align:center;
+         text-align:center;
+         background-color: #008CBA;
+         color: white;
+         width:50%;
+         height:80px;
+         }
+
+        .heading{
+         background:url("../img/33acdb7e6fe8424fbb8ea273674c745c.jpg") no-repeat;
+         background-size: cover;
+         min-height: 92vh;
+         color: white;
+         background-position:cover;
+         padding-top: 30px;
+         margin-top:0px;
+         }
+
+         .abcd{
+         color:#fff;
+         }

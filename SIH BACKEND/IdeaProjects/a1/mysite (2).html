@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='uft-8'>
+<title>Rail Rakshak </title>
+<meta name="discription" contents="RailRakshak" >
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<script type="text/javascript"> 
+function validate()
+ { 
+var user=document.getElementById("user");
+var usr=document.getElementById("usr").value;
+var pwd=document.getElementById("pwd").value;
+if(usr=="" || pwd=="")
+{alert ("please fill all the required field")
+return false;}
+return true;
+}
+ 
+
+ function validate1()
+ {
+var usr2=document.getElementById("usr1").value;
+var pwd2=document.getElementById("pwd1").value;
+if(usr2=="" || pwd2=="")
+{alert "please fill all the required field";
+return false;}
+ 
+ return true;
+ }
+  function clickedButton()
+            {
+
+                window.location = 'file:///C:/Users/ASASAWARI/Desktop/bootstrap-3.3.7-dist/css/REGISTER.html'
+
+            }
+ </script>
+
+
+<body>
+<div class="page-header text-center">
+  <h1>RAILRAKSHAK</h1>
+</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+   
+    </div>
+	
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+
+      <li><a href="#">about us</a></li>
+      <li><a href="#">contact us</a></li>
+      <li><a href="#">Page 3</a></li>
+	  <li><a href="#">Page 3</a></li>
+	  <li><a href="#">Page 3</a></li>
+	  <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+  </nav>
+<br></br>
+
+<div class="container"  >
+
+  <div class="row" >
+  
+    <div class="col-sm-6 text-center" id="user" >
+      <h3>RPF SIDE</h3>
+	  <form> 
+	  <div class="btn-group">
+	  <div class="form-group" >
+  <label for="usr">USERNAME:</label>
+  
+  <input type="text" class="form-control" id="usr" required>
+</div>
+<div class="form-group">
+  <label for="pwd">PASSWORD:</label>
+  <input type="password" class="form-control" id="pwd" required>
+</div>
+
+    <button type="button" value="submit" class="btn btn-primary "  onClick="validate()";>LOGIN</button>
+   </div>
+   </div>
+   </form>
+  
+	<div class="col-sm-6 text-center" id="user1">
+	<h3>VICTIM SIDE</h3>
+	<form name="form" method="post" action="http://localhost:4567/validation" onsubmit="return validate1()">
+<div class="btn-group">
+  
+  <div class="form-group">
+  <label for="usr" class="control-label">USERNAME:</label>
+  <input type="text" class="form-control" id="usr1" name="usr1" required >
+</div>
+<div class="form-group">
+  <label for="pwd">PASSWORD:</label>
+  <input type="password" class="form-control" id="pwd1" name="pwd1">
+</div>
+
+<!--    <button type="button" value="submit" class="btn btn-primary";>LOGIN</button>
+	<br></br>   -->
+
+    <input type="submit" value="submit" name="login">
+	
+  <button type="button" class="btn btn-primary" onClick="clickedButton()"/>REGISTER</button>
+  
+</div>
+     </div>
+	 </form>
+ 
+  </div>
+</div></div>
+<br></br>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

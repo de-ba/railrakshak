@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+<title>Rail Rakshak </title>
+<!--<meta name="discription">-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+    <!--<link href="/enquiry/css/bootstrap.min.css?version=1" rel="stylesheet">-->
+
+    <!--<link href="/enquiry/css/shop-item.css?version=2" rel="stylesheet">-->
+
+    <!--<script src="https://www.google-analytics.com/analytics.js"></script>-->
+
+    <!--&lt;!&ndash;<script src="/enquiry/js/bootstrap.js?version=1"></script>&ndash;&gt;-->
+    <!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+    <!--<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>-->
+    <!--&lt;!&ndash;<script src="../js/pnrEnquiryJS.js?version=15"></script>&ndash;&gt;-->
+    <meta name="discription">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script>
+
+function checkValidation()
+        {
+
+
+                                                if ($('#inputPnrNo').val() == null
+                                                                || $('#inputPnrNo').val() == '') {
+                                                        isError = "true";
+                                                        errorMessage = BlankPNRError;
+                                                }
+
+                                                else  if ($('#inputPnrNo').val() != null
+                                                                && $('#inputPnrNo').val() != ''
+                                                                && $('#inputPnrNo').val().length < 10) {
+                                                        isError = "true";
+                                                        errorMessage = PNRLengthError;
+                                                }
+                                                else if(captchaConfig != '0')
+                        		        		{
+                        						if ($('#inputCaptcha').val() == null
+                        								|| $('#inputCaptcha').val() == '') {
+                        							isError = "true";
+                        							errorMessage = BlankCaptchaError;
+                        						}}
+
+         }
+
+
+
+
+
+
+    </script>
+
+
+
+    <script>
+window.onload = function() {
+ var pie= new XMLHttpRequest();
+
+ pie.onreadystatechange = function()
+ {
+ if (this.readyState==4 && this.status==200)
+     {  var pies = JSON.parse(this.responseText);
+        document.getElementById('Statusid');
+
+                var accepted=parseInt(pies[0].counting);
+                var investigation=parseInt(pies[1].counting);
+                 var submitted=parseInt(pies[2].counting);
+
+                <!--var total=+submitted + +accepted;-->
+                piechart(accepted,investigation,submitted);
+
+
+     }
+ }
+ pie.open('GET','http://192.168.43.141:4567/pie',true);
+ pie.send();
+
+
+function piechart(a,i,s){
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Fir Status",
+		horizontalAlign: "center"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: a, label: "Accepted" },
+			{ y: i, label: "Investigation Complete" },
+			{ y: s, label: "Submitted" },
+
+		]
+	}]
+});
+chart.render();
+
+}
+
+        var bar= new XMLHttpRequest();
+        bar.onreadystatechange = function()
+ {
+ if (this.readyState==4 && this.status==200)
+     {  var bars = JSON.parse(this.responseText);
+        document.getElementById('firid');
+                var dacoity=                 parseInt(bars[0].fircount);
+                var gambling=                parseInt(bars[1].fircount);
+                var molestation=             parseInt(bars[2].fircount);
+                var murder=                  parseInt(bars[3].fircount);
+                <!--var attempttomurder=        parseInt(bars[1].counting);-->
+               <!---->
+                <!--var dacoity with firearms=        parseInt(bars[3].counting);-->
+                 <!--var robbery=                parseInt(bars[4].counting);-->
+                <!--var robbery with firearms=        parseInt(bars[5].counting);-->
+                 <!--var burglary=                parseInt(bars[6].counting);-->
+                <!--var theft=        parseInt(bars[7].counting);-->
+                 <!--var rape=                parseInt(bars[8].counting);-->
+                <!---->
+                 <!--var hurts=                parseInt(bars[10].counting);-->
+                <!--var riots=        parseInt(bars[11].counting);-->
+                 <!--var communal riots=                parseInt(bars[12].counting);-->
+                 <!--var assualt on govt. servant act=       parseInt(bars[13].counting);-->
+                <!---->
+                <!--var money lender act=        parseInt(bars[15].counting);-->
+                 <!--var essential commodities acts=       parseInt(bars[16].counting);-->
+              <!---->
+                <!--var total=+submitted + +accepted;-->
+                barchart(dacoity,gambling,molestation, murder);
+
+
+     }
+ }
+ bar.open('GET','http://192.168.43.141:4567/bar',true);
+ bar.send();
+
+
+function barchart(d,g,mo,mu){
+
+var chart = new CanvasJS.Chart("chartContainer1", {
+	animationEnabled: true,
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	title:{
+		text: "FIRs lodged in Different Categories"
+	},
+	axisY: {
+		title: "No. of FIRs"
+	},
+	data: [{
+		type: "column",
+		showInLegend: true,
+		legendMarkerColor: "grey",
+		legendText: "Type of Crime",
+		dataPoints: [
+		    { label: "DACOITY" ,                    y: d },
+		    { label: "GAMBLING",                    y: g },
+		    { label: "MOLESTATION",                 y: mo },
+			{ label: "MURDER",                      y: mu }
+
+			<!--{ label: "ATTEMPT TO MURDER",           y: 35960 },-->
+			<!---->
+			<!--{ label: "DACOITY WITH FIREARMS",       y: 42240 },-->
+			<!--{ label: "ROBBERY" ,                    y: 43200 },-->
+			<!--{ label: "ROBBERY WITH FIREARMS",       y: 40600 },-->
+			<!--{ label: "BURGLARY",                    y: 42560 },-->
+			<!--{ label: "THEFT",                       y: 44280 },-->
+			<!--{ label: "RAPE",                        y: 44800 },-->
+		<!---->
+			<!--{ label: "HURT" ,                       y: 50840 },-->
+			<!--{ label: "RIOTS",                       y: 51600 },-->
+			<!--{ label: "COMMUNAL RIOTS",              y: 42560 },-->
+			<!--{ label: "ASSAULT ON GOVT. SERVANT ACT",y: 44280 },-->
+		<!---->
+			<!--{ label: "MONEY LENDERS ACT",           y: 48720 },-->
+			<!--{ label: "ESSENTIAL COMMODITIES ACT" ,  y: 50840 },-->
+
+		]
+	}]
+});
+chart.render();
+
+}
+}
+
+</script>
+
+<script type="text/javascript"> 
+function validate()
+ { 
+var user=document.getElementById("user");
+var usr=document.getElementById("usr").value;
+var pwd=document.getElementById("pwd").value;
+if(usr=="" || pwd=="")
+{alert ("please fill all the required field")
+return false;}
+return true;
+}
+ 
+
+ function validate1()
+ {
+var usr2=document.getElementById("usr1").value;
+var pwd2=document.getElementById("pwd1").value;
+if(usr2=="" || pwd2=="")
+{alert( "please fill all the required field");
+return false;}
+ 
+ return true;
+ }
+
+ </script>
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 15px;
+    text-align: left;
+    }
+    table#t01 {
+    width: 100%;
+    background-color:#E3F2FD;
+    }
+</style>
+</head>
+
+<body>
+<div class="page-header text-center">
+  <h1>RAILRAKSHAK</h1>
+</div>
+<nav class="nav nav-tabs">
+
+
+	
+    <ul class="nav navbar-nav">
+        <li><a data-toggle="tab" href="#home">Home</a></li>
+        <li><a data-toggle="tab" href="#contact">Contact us</a></li>
+        <li ><a data-toggle="tab" href="#status">Status</a></li>
+        <li ><a data-toggle="tab" href="#piechart">Reports</a></li>
+        <!--<li ><a data-toggle="tab" href="#bargraph">bar graph</a></li>-->
+    </ul>
+
+  </nav>
+<br>
+<div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+<div class="container"  >
+
+  <div class="row" >
+
+    <div class="col-sm-6 text-center" id="user" >
+      <h3>RPF SIDE</h3>
+	  <form>
+	  <div class="btn-group">
+	  <div class="form-group" >
+  <label for="rpfname">USERNAME:</label>
+  
+  <input type="text" class="form-control" id="rpfname" required>
+
+<div class="form-group">
+  <label for="rpfpassword">PASSWORD:</label>
+  <input type="password" class="form-control" id="rpfpassword" required>
+</div>
+          <div class="form-group">
+              <label>LOCATION:</label>
+
+              <select id="stationanme" class="form-control">
+                  <option></option>
+                  <option>MUMBAI</option>
+              <option>DELHI</option>
+                  <option>UDAIPUR</option>
+                  <option>KOLKATA</option>
+                  <option>CHENNAI</option>
+
+              </select>
+          </div>
+
+    <button type="button" value="submit" class="btn btn-primary "  onclick="validate()">LOGIN</button>
+      </div></div></form></div>
+
+	<div class="col-sm-6 text-center" id="user1">
+	<h3>VICTIM SIDE</h3>
+	<form name="form" method="post" action="http://localhost:4567/validation" onsubmit="return validate1()">
+<div class="btn-group">
+  
+  <div class="form-group">
+  <label for="user1" class="control-label">USERNAME:</label>
+  <input type="text" class="form-control" id="usr1" name="usr1" required >
+</div>
+<div class="form-group">
+  <label for="pwd1">PASSWORD:</label>
+  <input type="password" class="form-control" id="pwd1" name="pwd1">
+</div>
+
+    <button type="button" class="btn btn-primary" value="submit" name="login">LOGIN</button>
+	<br><br>
+  <button type="button" class="btn btn-primary" >REGISTER</button>
+
+</div>
+	 </form>
+ 
+  </div>
+  </div></div></div>
+
+    <div id="status" class="tab-pane fade">
+        <div class="first2">
+            <div style="padding: 5px; margin-bottom: 2px; height:">
+                <div class="row form-group">
+                    <div class="col-md-12 text-center" align="center">
+                        <h1 align="center">FIR STATUS</h1><br>
+                        <h4 align="center" id="h2">Enter the FIR ID below to check the status of your FIR.</h4>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-12 text-center" align="center">
+                        <div class="col-md-12 text-center  label_text" align="center">
+                            <label>Enter FIR Id</label><br>
+                        </div>
+                        <br>
+                        <div class="col-md-12" align="center" style="margin-left:auto !important;margin-right:auto !important;">
+                            <input class="form-control_custom input_text_custom" type="text" id="firid" maxlength="10" value="" placeholder="Enter FIR Id." onkeypress="return ((event.charCode >= 48 &amp;&amp; event.charCode <= 57) ||  event.charCode == 0)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-md-12">
+
+                        <div class="col-md-4 text-center" align="center">
+
+                        </div>
+                        <div class="col-md-4 text-center" align="center" style="margin-left:auto !important;margin-right:auto !important;">
+                            <div id="firstCondition"><input type="button" style="margin-top: 10px; cursor: auto" class="btn btn-primary btn-md" value="Submit" id="modal1">&nbsp;&nbsp; <input type="reset" style="margin-top: 10px; cursor: auto" class="btn btn-primary btn-md" id="clearPnrNo" value="Clear"></div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="tab-pane fade">
+
+
+        <div class="bodyContent">
+            <h1 align="center">CONTACT INFORMATION</h1>
+            <table style="width:100%" id="t01">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>RPF Thana</th>
+                    <th>Railway Phone</th>
+                </tr>
+
+                <tr>
+                    <td>1.</td>
+                    <td>CST Main</td>
+                    <td>010-55760/62</td>
+                </tr>
+
+                <tr>
+                    <td>2.</td>
+                    <td>CST Adm</td>
+                    <td>010-55763/77</td>
+                </tr>
+
+                <tr>
+                    <td>3.</td>
+                    <td>Nagpur Stn.</td>
+                    <td>012-55760</td>
+                </tr>
+
+                <tr>
+                    <td>4.</td>
+                    <td>Ajni</td>
+                    <td>012-56770</td>
+                </tr>
+
+                <tr>
+                    <td>5.</td>
+                    <td>Pune Stn.</td>
+                    <td>013-55756/58</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+    <div id="piechart" class="tab-pane fade">
+       <div class="container"></div>
+        <div class="row" >
+
+            <div class="col-sm-6 text-center">
+        <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+        <!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+    <!--</div>-->
+            </div>
+    <!--<div id="bargraph" class="tab-pane fade">-->
+                <div class="col-sm-6 text-center">
+        <div id="chartContainer1" style="height: 370px; width: 100%;"></div>
+        <!--<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>-->
+    </div>
+</div>
+    </div>
+    </div>
+
+<br>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

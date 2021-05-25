@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+window.onload = function () {
+ var pie= new XMLHttpRequest();
+
+ pie.onreadystatechange = function()
+ {
+ if (this.readyState==4 && this.status==200)
+     {  var pies = JSON.parse(this.responseText);
+        document.getElementById('Statusid');
+
+                var accepted=parseInt(pies[0].counting);
+                var investigation =parseInt(pies[1].counting);
+                 var submitted=parseInt(pies[2].counting);
+
+                <!--var total=+submitted + +accepted;-->
+                piechart(accepted,investigation,submitted);
+
+
+     }
+ }
+ pie.open('GET','http://192.168.43.141:4567/pie',true);
+ pie.send();
+    
+
+function piechart(a,i,s){
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title:{
+		text: "Fir Status",
+		horizontalAlign: "center"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: a, label: "Accepted" },
+			{ y: i, label: "Investigation Complete" },
+			{ y: s, label: "Submitted" },
+
+		]
+	}]
+});
+chart.render();
+
+}
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>

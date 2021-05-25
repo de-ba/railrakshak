@@ -1,0 +1,1 @@
+if(!localStorage.username) window.location.href="http://localhost:63342/railrakshak /src/html/mysitefinal.html";

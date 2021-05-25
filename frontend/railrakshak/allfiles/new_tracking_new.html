@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIR SYSTEM TRACKING STATUS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+    <meta name="keywords" content="Shipment Track Widget Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+    <!--<link href="css/style.css" rel="stylesheet" type="text/css" media="all">-->
+
+    <style>
+/*A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+
+/*--end reset--*/
+    html body{
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
+	overflow: hidden;
+	font-family: arial;
+	font-size: 12px;
+	color: black;
+	background:black;
+}
+/*--wrap--*/
+.wrap{
+	margin:0 auto;
+	width:98%;
+	transition:all .2s linear;
+	-moz-transition:all .2s linear;/* firefox */
+	-webkit-transition:all .2s linear; /* safari and chrome */
+	-o-transition:all .2s linear; /* opera */
+	-ms-transition:all .2s linear;
+}
+body{
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+#wrap{
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+}
+#topBar{
+	background: #09364B;
+}
+.logo{
+	float: left;
+	padding:10px 0 0 0;
+}
+.logo a{
+	display: block;
+}
+.right{
+	float: right;
+	margin-top:15px;
+}
+a.closeMe{
+	color: #7CA0B4;
+	margin:9px 0 0 10px;
+}
+a.closeMe:hover{
+	color: #fff;
+}
+.closeMe {
+	background: url("../images/button_icon_close.png") no-repeat right center;
+	display: inline-block;
+	height: 16px;
+	margin: 0;
+	padding-right: 25px;
+}
+.go-back {
+	float: left;
+	display: block;
+	text-decoration: none;
+}
+.go-back a{
+	display: block;
+	padding: 8px 20px 8px 40px;
+	color:#DAEDFF;
+	font-size: 14px;
+	font-weight: 200;
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.23);
+	text-align: center;
+	-webkit-font-smoothing: antialiased;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background:#3577A3 url(../images/download-icon.png) no-repeat 12px;
+	-webkit-transition: all 0.5s ease-in;
+	-moz-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+}
+.go-back a:hover{
+	background:#4189B8 url(../images/download-icon-hover.png) no-repeat 12px;
+	color:#FFF;
+	text-shadow:none;
+}
+.download_digits{
+	display:inline-block;
+}
+.devices {
+	float: left;
+	padding:0 15px 0 0%;
+}
+.devices li {
+	display: inline;
+	width: 40px;
+}
+.devices li a{
+	display:inline-block;
+}
+.social{
+	float: left;
+	margin: 10px 20px 0 0;
+}
+.social li{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px;
+	color: #7CA0B4;
+}
+#livePreviewFrame {width: 100%; background-color: #fff;}
+#wrap #topBar {
+	height:60px;
+	border-bottom:1px solid #314D68;
+	background:#314D68;
+}
+#wrap span.trigger {
+	display:block;
+	position:absolute;
+	background:#314D68;
+	width:81px;
+	height:25px;
+	left:27px;
+	bottom:-26px;
+	cursor:pointer;
+	border:1px solid #314D68;
+	border-top:0;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	z-index: 1;
+}
+#wrap span.trigger em {
+	background:url(../images/trigger-arrow.png) no-repeat 0 0;
+	background-repeat:no-repeat;
+	display:block;
+	width:17px;
+	height:10px;
+	position:absolute;
+	left:32px;
+	bottom:6px;
+}
+#wrap.closed span.trigger em {
+	background-position:0 bottom
+}
+/*--end reset--*/
+.device{
+	text-align: center;
+	margin: 3em auto;
+}
+.ipad-frame-ver{
+	width: 768px;
+	padding: 5em 4.5em;
+	background: #333;
+	margin: 0 auto;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	border-radius: 3em;
+	padding: 5em;
+		text-align: center;
+}
+.ipad-frame-land{
+	width: 1024px;
+	padding: 3em 6em;
+	background: #333;
+	margin: 0 auto;
+		-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	border-radius: 3em;
+	padding: 5em;
+	background: #333;
+}
+.smart-frame-land{
+	width: 600px;
+	height: 320px;
+	padding: 2em 5em 2em 5em;
+	background: #333;
+	margin: 0 auto;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	border-radius: 3em;
+}
+.smart-frame-var{
+	width: 320px;
+	height: 580px;
+	padding: 5em 3em;
+	background: #333;
+	margin: 0 auto;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	border-radius: 3em;
+}
+.mobile-frame{
+	width: 240px;
+	height: 500px;
+	padding: 3.5em 1.8em;
+	background: #333;
+	margin: 0 auto;
+	-webkit-border-radius: 3em;
+	-moz-border-radius: 3em;
+	border-radius: 3em;
+}
+.adpack{
+	left: 25px;
+	top: 130px;
+	width:160px;
+	overflow:auto;
+	position:fixed;
+	margin:200px 0 0 20px;
+	float:left;
+	z-index: 1;
+	padding: 7px 0;
+}
+@media only screen and (max-width:800px) {
+	.wrap{
+		width:95%;
+	}
+	.devices{
+		padding:5px 0 0 9%;
+	}
+	a.closeMe{
+		margin:9px 0 0 5px;
+	}
+	.closeMe{
+		padding-right:18px;
+	}
+}
+
+
+
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+}
+.clear {
+	clear:both;
+}
+.header {
+	margin-top:2%;
+	width:100%;
+	text-align:center;
+}
+.header h1 {
+	font-family: 'Open Sans', sans-serif;
+	line-height:50px;
+	text-transform:uppercase;
+	color:white;
+}
+.content{
+	width:60%;
+	margin:3% auto 0 auto;
+	height:460px;
+	background-color:#F5F5F5;
+}
+.content1 {
+	background-color:#79BAEC;
+	text-align:center;
+	padding:2em;
+}
+.content1 h2 {
+	font-family: 'Open Sans', sans-serif;
+	text-transform:uppercase;
+	margin:0;
+	color:#fff;
+}
+.content2 {
+	background-color:#B7CEEC;
+}
+.content2-header1 {
+	float:center;
+	width:95%;
+	text-align:center;
+	padding:1.5em;
+}
+.content2-header1 p {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	font-weight:700;
+	color:black;
+	margin:0;
+}
+.content2-header1 span {
+	font-size:14px;
+	font-weight:400;
+}
+.shipment {
+	width:100%;
+	margin-top:10%;
+}
+span.line {
+    height: 5px;
+    width: 90px;
+    background-color:#000033;
+    display: block;
+    position: absolute;
+    top: 28%;
+    left: 45%;
+}
+.submitted{
+	text-align:center;
+	width:20%;
+	position:relative;
+	float:left;
+	margin-left:5%;
+}
+.greenToPink{
+	background-color:white;  <!--change to pink circles-->
+}
+.plineToGline {
+	background-color:white;  <!--change to green lines-->
+}
+.content3 p {
+	margin-left:-50%;
+	font-size:15px;
+	font-weight:600;
+}
+.imgcircle {
+	height:75px;
+	width:75px;
+	border-radius:50%;
+	background-color:#000033;
+	position:relative;
+}
+.imgcircle img {
+	height:30px;
+	position:absolute;
+	top: 28%;
+	left: 30%;
+}
+.verified{
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+}
+.underprocess {
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+}
+.caught{
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+}
+.closed{
+	position:relative;
+	width:20%;
+	text-align:center;
+	float:left;
+	margin-right:-9%;
+}
+.footer a, a:active {
+	color:black;
+	text-decoration:none;
+	font-family: 'Tahoma', sans-serif;
+}
+.footer a:hover {
+	color:#00c4ff;
+	text-decoration:none;
+	transition:all 0.5s ease-in-out;
+}
+.footer {
+	margin-top:3%;
+	text-align:center;
+	font-weight:100;
+}
+.footer p {
+	color:black;
+	font-size:15px;
+	font-family: 'Tahoma', sans-serif;
+	line-height:25px;
+}
+
+/*---- responsive-design -----*/
+@media(max-width:1920px){
+	span.line {
+	width:157px;
+	left:32%;
+	}
+	.shipment{
+		margin-top:6%;
+	}
+.content3 p{
+margin-left:-65%;
+}
+}
+
+@media(max-width:1680px){
+	.content3 p {
+    margin-left: -60%;
+}
+span.line {
+    width: 127px;
+    left: 37%;
+}
+}
+
+@media(max-width:1600px){
+span.line {
+    width: 117px;
+    left: 39%;
+}
+}
+
+@media(max-width:1440px){
+.content3 p {
+    margin-left: -53%;
+}
+span.line {
+    width: 99px;
+    left: 43%;
+}
+}
+
+@media (max-width: 1366px){
+span.line {
+    width: 90px;
+    left: 45%;
+}
+.shipment {
+    margin-top: 10%;
+}
+}
+
+@media (max-width: 1280px){
+span.line {
+    width: 80px;
+    left: 48%;
+	top:29%;
+}
+}
+
+@media (max-width: 1080px){
+.content {
+width: 75%;
+}
+span.line {
+    width: 88px;
+left: 46%;
+}
+}
+
+@media (max-width: 1050px){
+span.line {
+    width: 84px;
+    left: 47%;
+}
+}
+
+@media (max-width: 1024px){
+	.content{
+		width:77%;
+	}
+	.content3 p {
+		font-size:14px;
+	}
+}
+
+@media (max-width: 991px){
+	.content {
+    width: 80%;
+}
+span.line {
+    width: 84px;
+    left: 47%;
+}
+}
+
+@media (max-width: 900px){
+.content {
+    width: 85%;
+}
+span.line {
+    width: 78px;
+    left: 49%;
+}
+}
+
+@media (max-width: 800px){
+.content {
+    width: 95%;
+}
+.content2-header1 p {
+	margin: 0 0 0 -7%;
+}
+}
+
+@media (max-width: 768px){
+.content2-header1 {
+	width: 25%;
+}
+.content2-header1 p {
+    margin: 0 -19% 0 -10%;
+}
+span.line {
+    width: 72px;
+    left: 51%;
+}
+}
+
+@media (max-width: 736px){
+	span.line {
+    width: 62px;
+    left: 55%;
+}
+}
+
+@media (max-width: 667px){
+	.content2-header1 p {
+	font-size:14px;
+	}
+	.content2-header1 span {
+    font-size: 13px;
+}
+.shipment {
+    margin-top: 13%;
+}
+.content3 p {
+    font-size: 12px;
+	margin-left: -35%;
+}
+.submitted{
+	margin-left:4%;
+}
+span.line {
+    width: 49px;
+    left: 60%;
+}
+}
+
+@media (max-width: 600px){
+	.content1 {
+		padding:1.2em;
+	}
+.content2-header1 p {
+    font-size: 13px;
+}
+.content2-header1 span {
+    font-size: 12px;
+}
+.content2-header1 {
+    width: 24%;
+}
+.imgcircle {
+    height: 65px;
+    width: 65px;
+}
+.imgcircle img{
+	top: 26%;
+    left: 27%;
+}
+.content3 p {
+	margin-left: -38%;
+	font-size:11px;
+}
+.content {
+	height: 395px;
+}
+span.line {
+    width: 50px;
+    left: 58%;
+}
+}
+
+@media (max-width: 568px){
+	.content{
+		height:380px;
+	}
+	.content1{
+	padding: 1em;
+}
+span.line {
+    width: 56px;
+    left: 47%;
+}
+.content2-header1 {
+    width: 23%;
+}
+.imgcircle {
+    height: 50px;
+    width: 50px;
+}
+.imgcircle img {
+    height: 25px;
+    top: 27%;
+    left: 25%;
+}
+.content3 p {
+    font-size: 10px;
+    margin-left: -46%;
+}
+.submitted {
+    margin-left: 5%;
+}
+}
+
+@media (max-width: 414px){
+	.header {
+    margin-top: 8%;
+}
+	.content {
+    width: 93%;
+	height:885px;
+	margin-top:9%;
+}
+	.content1 h2 {
+	font-size:22px;
+}
+	.content2-header1 {
+	padding:0.7em;
+    width: 80%;
+	margin-left: 3%;
+}
+	.content2-header1 p {
+    font-size: 19px;
+}
+	.content2-header1 span {
+    font-size: 16px;
+}
+	.submitted {
+	width:100%;
+}
+	.verified {
+	width:100%;
+	margin: 22% 0 0 5%;
+}
+	.underprocess{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
+	.caught{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
+	.closed{
+	width:100%;
+	margin: 22% 0 0 5%;
+}
+	.imgcircle {
+    height: 70px;
+    width: 70px;
+	margin-left: 35%;
+}
+	.imgcircle img {
+    height: 30px;
+    top: 27%;
+    left: 28%;
+}
+	span.line {
+    width: 6px;
+    left: 43.5%;
+    height: 58px;
+	top:152%;
+}
+	.content3 p {
+    font-size: 15px;
+    margin: -12% 0 0 -72%;
+}
+	.shipment {
+    margin-left: 16%;
+}
+	.footer {
+	padding:1%;
+}
+	.footer p {
+	font-size:16px;
+}
+}
+
+@media (max-width: 384px){
+	.header {
+    margin-top: 9%;
+}
+	.content1 h2 {
+    font-size: 21px;
+}
+	.content3 p {
+    margin: -13% 0 0 -74%;
+}
+	.shipment {
+    margin-top: 11%;
+}
+	span.line {
+	top:154%;
+	left:44%;
+	height:52px;
+}
+	.content {
+    height: 845px;
+}
+	.footer {
+    padding: 3%;
+}
+	.footer p {
+    font-size: 15px;
+}
+}
+
+@media (max-width: 375px){
+	.content {
+    height: 840px;
+}
+	.content1 h2 {
+    font-size: 20px;
+}
+	span.line {
+    top: 149%;
+    left: 44.5%;
+    height: 51px;
+}
+	.shipment {
+    margin-left: 17%;
+}
+}
+
+@media (max-width: 320px){
+	.header {
+    margin-top: 10%;
+}
+	.content{
+	margin-top: 10%;
+}
+	.content1 {
+    padding: 1em;
+}
+	.header h1{
+	font-size:31px;
+}
+	.content {
+    height: 830px;
+}
+	.content1 h2 {
+    font-size: 17px;
+}
+	.content2-header1 span {
+    font-size: 15px;
+}
+	.content3 p {
+    margin: -16% 0 0 -79%;
+}
+	.shipment {
+    margin-left: 19%;
+}
+	span.line {
+    top: 115%;
+    left: 46%;
+}
+	.footer {
+	margin-top: 1%;
+}
+	.footer p {
+    font-size: 14px;
+}
+}
+</style>
+</head>
+<body>
+
+<!---728x90--->
+<div class="header">
+    <h1><b>TRACKING STATUS</b></h1>
+</div>
+<!---728x90--->
+<div class="content">
+    <div class="content1">
+        <h2>FIR TRACKING</h2>
+    </div>
+    <div class="content2">
+
+        <div class="content2-header1">
+            <p>Status</p>
+        </div>
+
+        <div class="clear"></div>
+    </div>
+    <div class="content3">
+        <div class="shipment">
+            <div class="submitted">
+                <div name="submittedcircle" id="submittedcircle" class="imgcircle">
+                    <img src="Oxygen-Icons.org-Oxygen-Places-mail-folder-outbox.ico" alt="fir submitted">
+                </div>
+                <span class="line"></span>
+                <p>FIR Submitted</p>
+            </div>
+            <div class="verified">
+                <div name="acceptedcircle" id="acceptedcircle" class="imgcircle">
+                    <img src="id-verified.png" alt="fir verified">
+                </div>
+                <span class="line plineToGline"></span>
+                <p>FIR Verified</p>
+            </div>
+            <div class="underprocess">
+                <div name="under processcircle" id="under processcircle" class="imgcircle">
+                    <img src="processsing.png" alt="fir under process">
+                </div>
+                <span class="line"></span>
+                <p>Under Process</p>
+            </div>
+            <div class="caught">
+                <div name="completecircle" id="completecircle" class="imgcircle">
+                    <img src="caught.png" alt="investigation complete">
+                </div>
+                <span class="line"></span>
+                <p>Investigation Complete</p>
+            </div>
+            <div class="closed">
+                <div name="closedcircle" id="closedcircle" class="imgcircle">
+                    <img src="cp.png" alt="case closed">
+                </div>
+                <p>Case Closed</p>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!---728x90--->
+<input type="button" class="btn-btn"  id="button">
+<div class="footer">
+
+</div>
+
+
+
+<script>
+      var sta = new XMLHttpRequest();
+
+        sta.onreadystatechange = function()
+        {
+            if (this.readyState == 4 &&this.status==200)
+            {
+                var cha =JSON.parse(sta.responseText);
+                     console.log(cha);
+
+
+                     document.getElementById(cha[0].status+'circle').style.backgroundColor='#64DD17';
+                     console.log(cha);
+
+            }
+        }
+
+        sta.open('GET', 'http://192.168.43.141:4567/track', true);
+        sta.send();
+
+
+</script>
+
+</body>
+</html>
