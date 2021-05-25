@@ -1,8 +1,8 @@
 # RailRakshak
 
-This project was directed towards the ease of filing an FIR ([First Information Report](https://en.wikipedia.org/wiki/First_information_report "FIR")) to the Railway Police Force (RPF) in Mumbai,IN using a web portal from any location.
+This project was directed towards the ease of filing an FIR ([First Information Report](https://en.wikipedia.org/wiki/First_information_report "FIR")) to the Railway Police Force (RPF) in Mumbai,IN using a web portal from any location. My team and I created this project during Smart India Hackathon 2018, and we featured in Udaipur's local news channel.
 
-This project was intended to make things easy for the victim as well as the police when it comes to filing documentation.
+RailRakshak was intended to make things easy for the victim as well as the police when it comes to filing documentation.
 
 
 ## Flow of events can be seen here:
