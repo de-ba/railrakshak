@@ -23,3 +23,8 @@ This project was intended to make things easy for the victim as well as the poli
   * If it is not under their jurisdiction, they can forward it to other RPFs according to the law depending on whether it is on the local lines, or inter-city lines.
 
   * The time consuming process of documentation is reduced and they can take swift action and reach out to the victim.
+
+
+A sample FIR filed:
+
+![Sample FIR](https://github.com/delzadbamji/railrakshak/blob/master/SIH%20BACKEND/IdeaProjects/a1/uploads/sample.pdf)
