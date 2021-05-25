@@ -1,14 +1,14 @@
-#RailRakshak
+# RailRakshak
 
 This project was directed towards the ease of filing an FIR ([First Information Report](https://en.wikipedia.org/wiki/First_information_report "FIR")) to the Railway Police Force (RPF) in Mumbai,IN using a web portal from any location.
 
 This project was intended to make things easy for the victim as well as the police when it comes to filing documentation.
 
 
-## FLOW of events can be seen here:
+## Flow of events can be seen here:
 [FLOW CHART](https://github.com/delzadbamji/railrakshak/blob/master/flow_of_events.docx)
 
-
+## Roles and process:
 - Victim Side
  
   * We can understand the plight of a victim when they are robbed, hurt, assaulted, etc. on a moving vehicle or the platform, and help them file an FIR online without the feeling of being judged or having to go all the way to the nearest RPF quarters. They can do this at the convenience of thier homes or on the journey in the train itself.
