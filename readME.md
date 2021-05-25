@@ -6,7 +6,7 @@ This project was intended to make things easy for the victim as well as the poli
 
 
 ## FLOW of events can be seen here:
-[Sample FIR](https://github.com/delzadbamji/railrakshak/blob/master/flow_of_events.docx)
+[FLOW CHART](https://github.com/delzadbamji/railrakshak/blob/master/flow_of_events.docx)
 
 
 - Victim Side
